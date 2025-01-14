@@ -1,12 +1,10 @@
-# Copyright 2021 - Pierre Verkest
+# Copyright 2021-2025 Pierre Verkest
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 from datetime import date
 
 from odoo import _, fields, models
 from odoo.osv import expression
 from odoo.tools import float_round
-
-from odoo.addons.sale_timesheet.models.project_overview import _to_action_data
 
 
 class Project(models.Model):
@@ -310,6 +308,7 @@ class Project(models.Model):
 
     def _plan_get_stat_button(self):
         """Overlaod to add consumable stat button and alter timesheet button"""
+        raise NotImplementedError()
         stat_buttons = super()._plan_get_stat_button()
 
         stat_buttons.pop()
@@ -320,21 +319,21 @@ class Project(models.Model):
         ts_form = self.env.ref(
             "project_consumable.project_consumable_product_line_form"
         )
-        stat_buttons.append(
-            {
-                "name": _("Consumable"),
-                "count": sum(self.mapped("consumable_count")),
-                "icon": "fa fa-copy",
-                "action": _to_action_data(
-                    "account.analytic.line",
-                    domain=[
-                        ("project_id", "in", self.ids),
-                        ("product_id", "!=", False),
-                    ],
-                    views=[(ts_tree.id, "list"), (ts_form.id, "form")],
-                ),
-            }
-        )
+        # stat_buttons.append(
+        #     {
+        #         "name": _("Consumable"),
+        #         "count": sum(self.mapped("consumable_count")),
+        #         "icon": "fa fa-copy",
+        #         "action": _to_action_data(
+        #             "account.analytic.line",
+        #             domain=[
+        #                 ("project_id", "in", self.ids),
+        #                 ("product_id", "!=", False),
+        #             ],
+        #             views=[(ts_tree.id, "list"), (ts_form.id, "form")],
+        #         ),
+        #     }
+        # )
 
         ts_tree = self.env.ref("hr_timesheet.hr_timesheet_line_tree")
         ts_form = self.env.ref("hr_timesheet.hr_timesheet_line_form")
@@ -344,18 +343,18 @@ class Project(models.Model):
             timesheet_label = [_("Days"), _("Recorded")]
         else:
             timesheet_label = [_("Hours"), _("Recorded")]
-        stat_buttons.append(
-            {
-                "name": timesheet_label,
-                "count": sum(self.mapped("total_timesheet_time")),
-                "icon": "fa fa-calendar",
-                "action": _to_action_data(
-                    "account.analytic.line",
-                    domain=[("project_id", "in", self.ids), ("product_id", "=", False)],
-                    views=[(ts_tree.id, "list"), (ts_form.id, "form")],
-                ),
-            }
-        )
+        # stat_buttons.append(
+        #     {
+        #         "name": timesheet_label,
+        #         "count": sum(self.mapped("total_timesheet_time")),
+        #         "icon": "fa fa-calendar",
+        #         "action": _to_action_data(
+        #             "account.analytic.line",
+        #             domain=[("project_id", "in", self.ids), ("product_id", "=", False)],
+        #             views=[(ts_tree.id, "list"), (ts_form.id, "form")],
+        #         ),
+        #     }
+        # )
 
         return stat_buttons
 
