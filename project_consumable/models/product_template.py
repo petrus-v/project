@@ -16,8 +16,9 @@ class ProductTemplate(models.Model):
 
     @api.onchange("type")
     def _onchange_type(self):
-        super()._onchange_type()
+        res = super()._onchange_type()
         if self.type == "consu":
             self.project_ok = True
         else:
             self.project_ok = False
+        return res
