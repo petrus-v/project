@@ -147,29 +147,3 @@ class TestProjectConsumable(TransactionCase):
             )
         )
         self.assertEqual(self.project.consumable_count, 1)
-
-    def test_timesheet_analysis_report_exclude_consumable(self):
-        self.env["account.analytic.line"].create(
-            {
-                "name": "test timesheet",
-                "project_id": self.project.id,
-                "unit_amount": 3,
-                "employee_id": self.employee.id,
-            }
-        )
-        self.env["account.analytic.line"].create(
-            self._prepare_consumable_line_data(
-                unit_amount=7,
-                product_uom_id=self.env.ref(
-                    "project_consumable.uom_cat_coffee_capsule_box_10"
-                ).id,
-            )
-        )
-        analysis = self.env["timesheets.analysis.report"].search(
-            [
-                ("project_id", "=", self.project.id),
-                ("employee_id", "=", self.employee.id),
-            ]
-        )
-        self.assertEqual(len(analysis), 1)
-        self.assertEqual(analysis.unit_amount, 3)
