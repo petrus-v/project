@@ -28,7 +28,8 @@ Project consumable
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This module provides a 'closed' flag on project task stages.
+This module allow to collect materials/consumable linked to a project
+adding account analytic lines.
 
 **Table of contents**
 
@@ -65,7 +66,6 @@ quantities and Unit of Mesure provided by users, analytic amount will be
 computed based on product cost.
 
 - Material & Consumable Menu
-- On task tab
 - Project tab
 
 Review consumable amount
@@ -98,7 +98,7 @@ Authors
 Contributors
 ------------
 
-- Pierre Verkest <pierreverkest84@gmail.com>
+- Pierre Verkest <pierre@verkest.fr>
 
 Maintainers
 -----------
@@ -112,6 +112,14 @@ This module is maintained by the OCA.
 OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
+
+.. |maintainer-petrus-v| image:: https://github.com/petrus-v.png?size=40px
+    :target: https://github.com/petrus-v
+    :alt: petrus-v
+
+Current `maintainer <https://odoo-community.org/page/maintainer-role>`__:
+
+|maintainer-petrus-v| 
 
 This module is part of the `OCA/project <https://github.com/OCA/project/tree/17.0/project_consumable>`_ project on GitHub.
 
