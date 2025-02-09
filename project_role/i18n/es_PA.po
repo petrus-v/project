@@ -54,9 +54,10 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:project_role.res_config_settings_view_form
 msgid ""
 "<span class=\"o_form_label\">Project Roles</span>\n"
-"                                <span class=\"fa fa-lg fa-building-o\" title="
-"\"Values set here are company-specific.\" role=\"img\" aria-label=\"Values "
-"set here are company-specific.\" groups=\"base.group_multi_company\"/>"
+"                                <span class=\"fa fa-lg fa-building-o\" "
+"title=\"Values set here are company-specific.\" role=\"img\" aria-"
+"label=\"Values set here are company-specific.\" groups=\"base."
+"group_multi_company\"/>"
 msgstr ""
 
 #. module: project_role
@@ -216,12 +217,6 @@ msgid "Is Follower"
 msgstr ""
 
 #. module: project_role
-#: model:ir.model.fields,field_description:project_role.field_project_assignment____last_update
-#: model:ir.model.fields,field_description:project_role.field_project_role____last_update
-msgid "Last Modified on"
-msgstr ""
-
-#. module: project_role
 #: model:ir.model.fields,field_description:project_role.field_project_assignment__write_uid
 #: model:ir.model.fields,field_description:project_role.field_project_role__write_uid
 msgid "Last Updated by"
@@ -243,11 +238,6 @@ msgstr ""
 #. module: project_role
 #: model:ir.model.fields,field_description:project_role.field_project_project__limit_role_to_assignments
 msgid "Limit Role To Assignments"
-msgstr ""
-
-#. module: project_role
-#: model:ir.model.fields,field_description:project_role.field_project_assignment__message_main_attachment_id
-msgid "Main Attachment"
 msgstr ""
 
 #. module: project_role
@@ -346,6 +336,11 @@ msgstr ""
 #. module: project_role
 #: model_terms:ir.ui.view,arch_db:project_role.res_config_settings_view_form
 msgid "Projects inherit Company assignments"
+msgstr ""
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_assignment__rating_ids
+msgid "Ratings"
 msgstr ""
 
 #. module: project_role

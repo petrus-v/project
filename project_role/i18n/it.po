@@ -59,15 +59,16 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:project_role.res_config_settings_view_form
 msgid ""
 "<span class=\"o_form_label\">Project Roles</span>\n"
-"                                <span class=\"fa fa-lg fa-building-o\" title="
-"\"Values set here are company-specific.\" role=\"img\" aria-label=\"Values "
-"set here are company-specific.\" groups=\"base.group_multi_company\"/>"
+"                                <span class=\"fa fa-lg fa-building-o\" "
+"title=\"Values set here are company-specific.\" role=\"img\" aria-"
+"label=\"Values set here are company-specific.\" groups=\"base."
+"group_multi_company\"/>"
 msgstr ""
 "<span class=\"o_form_label\">Ruoli progetto</span>\n"
-"                                <span class=\"fa fa-lg fa-building-o\" title="
-"\"I valori impostati qui sono specifici per azienda.\" role=\"img\" aria-"
-"label=\"I valori impostati qui sono specifici per azienda.\" groups=\"base."
-"group_multi_company\"/>"
+"                                <span class=\"fa fa-lg fa-building-o\" "
+"title=\"I valori impostati qui sono specifici per azienda.\" role=\"img\" "
+"aria-label=\"I valori impostati qui sono specifici per azienda.\" "
+"groups=\"base.group_multi_company\"/>"
 
 #. module: project_role
 #: model:ir.model.fields,field_description:project_role.field_project_assignment__message_needaction
@@ -232,12 +233,6 @@ msgid "Is Follower"
 msgstr "Segue"
 
 #. module: project_role
-#: model:ir.model.fields,field_description:project_role.field_project_assignment____last_update
-#: model:ir.model.fields,field_description:project_role.field_project_role____last_update
-msgid "Last Modified on"
-msgstr "Ultima modifica il"
-
-#. module: project_role
 #: model:ir.model.fields,field_description:project_role.field_project_assignment__write_uid
 #: model:ir.model.fields,field_description:project_role.field_project_role__write_uid
 msgid "Last Updated by"
@@ -260,11 +255,6 @@ msgstr "Limita ruolo progetto agli incarichi"
 #: model:ir.model.fields,field_description:project_role.field_project_project__limit_role_to_assignments
 msgid "Limit Role To Assignments"
 msgstr "Limita il ruolo agli incarichi"
-
-#. module: project_role
-#: model:ir.model.fields,field_description:project_role.field_project_assignment__message_main_attachment_id
-msgid "Main Attachment"
-msgstr "Allegato principale"
 
 #. module: project_role
 #: model:ir.model.fields,field_description:project_role.field_project_assignment__message_has_error
@@ -365,6 +355,11 @@ msgid "Projects inherit Company assignments"
 msgstr "I progetti ereditano gli incarichi azienda"
 
 #. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_assignment__rating_ids
+msgid "Ratings"
+msgstr ""
+
+#. module: project_role
 #: model:ir.model.fields,field_description:project_role.field_project_assignment__role_id
 #: model_terms:ir.ui.view,arch_db:project_role.project_assignment_search
 msgid "Role"
@@ -444,6 +439,12 @@ msgstr "Messaggi sito web"
 #: model:ir.model.fields,help:project_role.field_project_assignment__website_message_ids
 msgid "Website communication history"
 msgstr "Storico comunicazioni sito web"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Ultima modifica il"
+
+#~ msgid "Main Attachment"
+#~ msgstr "Allegato principale"
 
 #~ msgid "SMS Delivery error"
 #~ msgstr "Errore consegna SMS"
